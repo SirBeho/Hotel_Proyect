@@ -1,10 +1,10 @@
 import React from 'react'
-import logo from '../assets/img/logo.png'
+import logo from 'Hotel_Proyect/src/assets/img/logo.png'
 export default function Header() {
   return (
     <div className='container d-flex justify-content-between mt-3 mb-5'>
         <div className='logo'>
-            <img src= {logo} alt="" />
+            <img src={logo} alt="" />
         </div>
 
         <div class=" w-25 shadow rounded-4 d-flex pe-3 ps-3 align-items-center">
