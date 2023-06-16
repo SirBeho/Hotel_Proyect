@@ -56,7 +56,7 @@ function App() {
 
      <div className=" mt-5">
         <div className="container d-flex justify-content-between ">
-          <h1>Stays in Finland</h1>
+          <h1>Stays in Finlandia</h1>
           <span>12+ stays</span>
         </div>
 
