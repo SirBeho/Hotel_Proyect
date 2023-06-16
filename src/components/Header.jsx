@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from 'Hotel_Proyect/src/assets/img/logo.png'
+import logo from 'src/assets/img/logo.png'
 export default function Header() {
   return (
     <div className='container d-flex justify-content-between mt-3 mb-5'>
