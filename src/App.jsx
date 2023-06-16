@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 
 
+
 function App() {
   // La variable data es la que va a almacenar los datos de "stays.json" y setData nos ayudará a guardar esos datos en esa variable. Es necesario que inicialicemos esa variable como un array vacío para evitar errores.
   const [data, setData] = useState([]);
@@ -50,8 +51,8 @@ function App() {
  
   return (
     <>
+       
         <Header />
-
 
      <div className=" mt-5">
         <div className="container d-flex justify-content-between ">
