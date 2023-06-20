@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
+import Card from "./components/Card";
 
 
 
@@ -54,25 +55,20 @@ function App() {
        
         <Header />
 
-     <div className=" mt-5">
-        <div className="container d-flex justify-content-between ">
-          <h1>Stays in Finlandia</h1>
-          <span>12+ stays</span>
-        </div>
+        <section className="container  pt-3">
+            <div className=" pb-2 d-flex justify-content-between ">
+              <h1>Stays in Finland</h1>
+              <span>12+ stays</span>
+            </div>
+           
+            <div className=" mt-1 row row-cols-1  row-cols-md-2 row-cols-lg-3"> 
+              {data.map((dato, index) =>  <Card key={index} datos={dato}/>)}
+          </div>
+        </section>
 
-        <div className="">
-        {data.map((dato, index) => {
-          return  
-            })}
-       </div>   
-
-
-
-
-     </div>
-
-
-    
+        <section className="text-center my-4">
+          <h3 className=" text-secondary">created by <b>Benjamin Tavarez</b> - de devChallenges.io</h3>
+        </section>
     </>
   );
 }
