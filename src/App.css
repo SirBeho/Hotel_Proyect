@@ -1,10 +1,8 @@
 label{
-    border: transparent;
-    overflow: hidden;
-    padding: 0px 9px;
+    border: solid transparent 2px;
+    overflow: hidden;  
 }
 
-label:hover{
-    border-radius: 25px;
+label:is([aria-selected="true"]) {
     border: solid black 2px;
-}
+  }

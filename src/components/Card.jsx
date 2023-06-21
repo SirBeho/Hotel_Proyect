@@ -7,7 +7,7 @@ export default function Card({datos}) {
         <img src={datos.photo} className=" rounded-4 object-fit-cover" style={{maxHeight : "282px"}} alt="..."/>
         <div className="d-flex pt-2 align-items-center my-2" >
            {datos.superHost ? <span className=' p-2 me-2 border border-black rounded-4'>SUPER HOST</span>:null }
-            <h3 className="card-text text-secondary"> {datos.type}</h3>
+            <h3 className="card-text text-secondary"> {datos.type}{datos.superHost && datos.beds > 0 ? " . " +datos.beds + " beds" :null }</h3>
             <div className="card-text ms-auto d-flex align-items-center" >
                 <img style={{height: "15px"}} src={estrella} className="card-img-top"/>
                 <span>{datos.rating}</span>

@@ -18,7 +18,9 @@ function App() {
       const resJson = await res.json();
     
       setData(resJson);
-      setFiltrado(resJson);   
+      setFiltrado(resJson);  
+      console.log(resJson)
+
     } catch (error) {
       console.log(error);
     }
@@ -28,25 +30,22 @@ function App() {
     getData();
   }, []);
 
-  useEffect(() => {
-    setFiltrado(DATA);
-  }, [DATA]);
-
-  function filterList(e) {
-    let  inputValue= e.toLowerCase();
-
+  function filterList(location,guest) {
+    console.log(guest);
     const FILTERED = DATA.filter((el) => {
-      
-      return (el.country+","+el.city).toLowerCase().includes(inputValue);
+      console.log("p",guest,"en",el.maxGuests,"hotel",el.city ,guest <= el.maxGuests);
+      return ((el.country+","+el.city).toLowerCase().includes(location.toLowerCase())  && guest <= el.maxGuests) ;
     })
-    
     setFiltrado(FILTERED);
+    
+
   } 
   return (
     <>
       <Header /> 
-      <Search data={filtrado} input={filterList}/> 
+      <Search data={filtrado} filtrado={filterList}/> 
       <Body data={filtrado}/>
+      <Foother/>
     </>
   );
 }
