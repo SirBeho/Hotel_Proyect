@@ -6,13 +6,11 @@ export default function Header() {
         <div className='logo'>
             <img src= {logo} alt="" />
         </div>
-
-        <div className=" shadow rounded-4 d-flex align-items-center overflow-hidden " style={{maxWidth:"26%",minWidth: "270"}}>
+        <div type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" className=" shadow rounded-4 d-flex align-items-center overflow-hidden " style={{maxWidth:"26%",minWidth: "270"}}>
           <input type="text" className="outline-none border border-0 w-50 px-3 py-3" style={{outline : "none"}} aria-label="" />
           <input type="text" className="border-end border-start border border-0 w-50 px-3 py-3" style={{outline : "none"}} placeholder="" aria-label="Server"/>
           <span className="material-symbols-outlined p-2">search</span>
         </div>
-
     </div>
   )
 }

@@ -1,0 +1,10 @@
+label{
+    border: transparent;
+    overflow: hidden;
+    padding: 0px 9px;
+}
+
+label:hover{
+    border-radius: 25px;
+    border: solid black 2px;
+}
