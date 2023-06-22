@@ -30,7 +30,7 @@ export default function Search({data,filtrado}) {
   <div className="modal-dialog modal-fullscreen">
     <div className="modal-content p-5 h-auto" >
         {/* ` buscador` */}
-        <div className="d-flex align-items-center w-100 shadow rounded-4  mb-3" id="pills-tab" role="tablist">
+        <div className="d-flex flex-wrap flex-sm-nowrap  row-gap-3 justify-content-evenly w-100 shadow rounded-4  mb-3" id="pills-tab" role="tablist">
 
               <label className="w-100 rounded-4 py-2 px-4 active" htmlFor="location" data-bs-toggle="pill" data-bs-target="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true" >Location<br/>
                   <input id="location" placeholder="Add location" value={localValue} onChange={handleInputChange} type="text" className="outline-none border border-0  " style={{outline : "none"}} />
@@ -53,7 +53,7 @@ export default function Search({data,filtrado}) {
          
           {/* opciones */}
           <div className="tab-content d-flex  w-100" >
-              <div className="w-100 py-2 px-4 tab-pane fade d-flex flex-column active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" >
+              <div className="w-100 py-2 px-4 tab-pane fade d-sm-flex  flex-column active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" >
                       {filteredData.map((dato, index) => {
                       return (
                       <div key={index} className="pe-auto d-flex m-3 ">
@@ -63,15 +63,13 @@ export default function Search({data,filtrado}) {
                       )})}
               </div>
 
-              <div className="w-100 py-2 px-4 tab-pane fade d-flex flex-column " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" >
+              <div className="w-100 py-2 px-4 tab-pane fade  flex-column " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" >
                 <div>
-                  
                   <Boton_num data={{person:"Adult",age:"13 or above",guestValue,setGuestValue}}/>
                   <Boton_num data={{person:"Children",age:"2-12",guestValue,setGuestValue}}/>
-                  
                 </div>
-
               </div>
+              
               <div className="w-100"></div>
           </div>
 
